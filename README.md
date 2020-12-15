@@ -2,7 +2,6 @@
     happy
 </h1>
 
-<<<<<<< HEAD
 ## happy is a platform to connect peoples to orphanages and spread happinnes.
 
 <p align="center">
@@ -158,17 +157,12 @@ This project is under [MIT](https://github.com/FelipePardim/happy/LICENSE.md) li
 
 <h2 id="author">
     👨‍💻 Author:
+    <div>
+        <a href="https://github.com/FelipePardim" margin="10px">
+            <img src="https://img.shields.io/badge/GitHub-FelipePardim-6f42c1?logo=github"/>
+        </a>
+        <a alt="Felipe Pardim" href="https://www.linkedin.com/in/felipe-pardim">
+            <img src="https://img.shields.io/badge/LinkedIn-Felipe%20Pardim-blue?logo=linkedin"/>
+        </a>
+    </div>
 </h2>
-<div>
-    <a href="https://github.com/FelipePardim" margin="10px">
-        <img src="https://img.shields.io/badge/GitHub-FelipePardim-6f42c1?logo=github"/>
-    </a>
-    <a alt="Felipe Pardim" href="https://www.linkedin.com/in/felipe-pardim">
-        <img src="https://img.shields.io/badge/LinkedIn-Felipe%20Pardim-blue?logo=linkedin"/>
-    </a>
-</div>
-=======
-## happy is a platform to connect peoples and orphages
-
-## :construction: Read-me under construction :construction:
->>>>>>> 8e14ad43bc17b1f4e84f7abef273c4a4b68bd3e4
