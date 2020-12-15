@@ -33,7 +33,7 @@
 ---
 
 ## About
-#### This project was developed during the Next Level Week 3 by RocketSeat 💜
+#### This project was developed during the Next Level Week 3 by [Rocketseat](https://github.com/Rocketseat) 🚀💜
 
 ---
 
@@ -44,7 +44,7 @@ To run this project, please install this:
 - [Git](https://git-scm.com).
 - [Node.js](https://nodejs.org/en/).
 - [Expo](https://expo.io/).
-- [npm](https://www.npmjs.com/). or [yarn](https://yarnpkg.com/).
+- [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
 
 Use your prefered text editor or IDE to study/change.
 I already used and recommend these text editors:
@@ -70,7 +70,7 @@ I already used and recommend these text editors:
 ></h3>
 >
 >> ```bash
->># Access backend folder.
+>># Access back-end folder.
 >> $ cd backend
 >>
 >># Install dependencies.
@@ -83,8 +83,8 @@ I already used and recommend these text editors:
 >>#or.
 >>$ npm dev
 >>
->># The server will listen on port 3333.
->># Access http://localhost:3333.
+>># The back-end server will listen on port 3333.
+>># Make API calls on http://localhost:3333.
 >>```
 >
 ><h3 id="running-web">
@@ -92,7 +92,7 @@ I already used and recommend these text editors:
 ></h3>
 >
 >>```bash
->># Access backend folder.
+>># Access front-end folder.
 >>$ cd frontend
 >>
 >># Install dependencies.
@@ -105,11 +105,11 @@ I already used and recommend these text editors:
 >>#or.
 >>$ npm start
 >>
->># The server will listen on port 3000
->># Access http://localhost:3000.
+>># The front-end server will up on port 3000
+>># Access the web app on http://localhost:3000.
 >>```
 >
-><h3 id="running-mobile">
+><h3 id="running-mobile">s
 >    📱 Running mobile app ( Android & IOS ).
 ></h3>
 >
@@ -125,7 +125,7 @@ I already used and recommend these text editors:
 >># Start the API server
 >>$ expo start
 >>
->> # Connect your IOS or Android device to the expo server, or run in a emulator;
+>> # Connect your iPhone or Android device to the expo server, or run in your prefered emulator;
 >>```
 >
 ---
