@@ -100,7 +100,7 @@ I already used and recommend these text editors:
 >>#or.
 >>$ npm install
 >>
->># Start the API server.
+>># Start the Web server.
 >>$ yarn start
 >>#or.
 >>$ npm start
@@ -122,7 +122,7 @@ I already used and recommend these text editors:
 >>#or
 >>$ npm install 
 >>
->># Start the API server
+>># Start the Expo server
 >>$ expo start
 >>
 >> # Connect your iPhone or Android device to the expo server, or run in your prefered emulator;
