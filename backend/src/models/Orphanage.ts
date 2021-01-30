@@ -1,5 +1,7 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, 
+    OneToMany, JoinColumn, BeforeInsert, ManyToOne } from 'typeorm';
 import Image from './Image';
+import User from './User';
 
 @Entity('orphanages')
 export default class Orphanage {
@@ -27,9 +29,23 @@ export default class Orphanage {
     @Column()
     open_on_weekends: boolean;
 
+    @Column()
+    approved: boolean;
+
+    @Column("int")
+    @ManyToOne(() => User, user => user.id)
+    @JoinColumn({ name: 'creator_id' })
+    user: User;
+
     @OneToMany(() => Image, image => image.orphanage, {
         cascade: ['insert', 'update' ]
     })
+    
     @JoinColumn({ name: 'orphanage_id'})
     images: Image[];
+
+    @BeforeInsert()
+    setAprrovedFalse() {
+        this.approved = false;
+    }
 }

@@ -17,8 +17,7 @@ const errorHandler: ErrorRequestHandler = (error, request, response, next) => {
         return response.status(400).json({ message: 'Validation fails', errors})
 
     } else if ( error.name == "EntityNotFound" ) {
-    
-        return response.status(404).json({ message: 'Orphanage not found'})
+        return response.status(404).json({ message: error.message });
     }
     // Tratar todos os possíveis erros gerados ao acessar a API
     

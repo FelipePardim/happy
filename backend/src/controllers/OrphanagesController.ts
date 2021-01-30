@@ -46,6 +46,8 @@ export default {
             return { path: image.filename }
         });
 
+        const creator_id: any = req.userId;
+
         const data = {
             name,
             latitude,
@@ -53,6 +55,7 @@ export default {
             about,
             instructions,
             opening_hours,
+            user: creator_id,
             open_on_weekends: open_on_weekends === 'true',
             images
         };
@@ -65,6 +68,7 @@ export default {
             instructions: Yup.string().required(),
             opening_hours: Yup.string().required(),
             open_on_weekends: Yup.boolean().required(),
+            user: Yup.number().required(),
             images: Yup.array(
                 Yup.object().shape({
                     path: Yup.string().required()
@@ -73,6 +77,7 @@ export default {
         });
 
         await schema.validate(data, {
+            // abortEarly can be turned False
             abortEarly: false
         });
 
@@ -81,5 +86,81 @@ export default {
         await orphanageRepository.save(orphanage);
 
         return res.status(201).json(orphanage);
+    },
+
+    async update(req: Request, res: Response) {
+        const { authorization } = req.headers;
+        const {
+            orphanage_id,
+            name,
+            about,
+            latitude,
+            longitude,
+            instructions,
+            opening_hours,
+            open_on_weekends
+            // images
+        } = req.body;
+
+        if (!authorization) {
+            return res.status(401);
+        }
+
+        try {
+            const orphanageRepository = getRepository(Orphanage);
+            let orphanageExists = await orphanageRepository.findOne({ where: { id: orphanage_id } });
+
+            if (!orphanageExists) {
+                return res.status(404).json("Orphanage not found.");
+            }
+
+            if (req.userId != orphanageExists.user) {
+                return res.status(403).json("You dont have permission.");
+            }
+
+            const data = {
+                name,
+                about,
+                latitude,
+                longitude,
+                instructions,
+                opening_hours,
+                open_on_weekends
+            }
+
+            const schema = Yup.object().shape({
+                name: Yup.string().required(),
+                about: Yup.string().required().max(300),
+                latitude: Yup.number().required(),
+                longitude: Yup.number().required(),
+                instructions: Yup.string().required(),
+                opening_hours: Yup.string().required(),
+                open_on_weekends: Yup.boolean().required()
+            });
+
+            await schema.validate(data, {
+                abortEarly: false
+            });
+
+            //Updating orphanage
+            orphanageExists.name = name;
+            orphanageExists.about = about;
+            orphanageExists.latitude = latitude;
+            orphanageExists.longitude = longitude;
+            orphanageExists.instructions = instructions;
+            orphanageExists.opening_hours = opening_hours;
+            orphanageExists.open_on_weekends = open_on_weekends;
+
+            await orphanageRepository.save(orphanageExists);
+
+            return res.status(200).json(orphanageExists);
+
+        } catch {
+            return res.status(400);
+        }
+    },
+
+    async adminUpdate(req: Request, res: Response ) {
+
     }
 }
