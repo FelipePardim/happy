@@ -151,7 +151,7 @@ form.create-orphanage-form button.confirm-button {
   height: 64px;
   border: 0;
   cursor: pointer;
-  background: #3CDC8C;
+  background: #37C77F;
   border-radius: 20px;
   color: #FFFFFF;
   font-weight: 800;
@@ -168,5 +168,5 @@ form.create-orphanage-form button.confirm-button svg {
 }
 
 form.create-orphanage-form button.confirm-button:hover {
-  background: #36CF82;
+  background: #3EE08F;
 }
