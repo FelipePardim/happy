@@ -1,0 +1,30 @@
+div.background {
+    position: fixed;
+    background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+    width: 65%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+div.background img {
+    width: 150px;
+    margin-top: 150px;
+}
+
+div.background strong {
+    font-size: 90px;
+    margin-bottom: 5%;
+}
+
+div.background h1 {
+    font-size: 25px;
+}
+
+div.background h2 {
+    font-size: 20px;
+    margin-bottom: 15%;
+}

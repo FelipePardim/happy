@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FiArrowRight } from 'react-icons/fi';
-
-import '../styles/pages/landing.css';
-
 import logoImg from '../images/logo.svg';
 
-function Landing() {
+function CreateUser() {
   return (
     <div id="page-landing">
       <div className="content-wrapper">
@@ -19,20 +15,18 @@ function Landing() {
         </div>
 
         <main>
-          <h1>Leve Felicidade para o mundo</h1>
-          <p>Visite orfanatos e mude o dia de muitas crianças.</p>
+          <h1>Login</h1>
         </main>
 
-        <Link to="/login" className="access">
+        <Link to="/" className="access">
           Acessar
         </Link>
 
         <Link to="/app" className="enter-app">
-          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
         </Link>
       </div>
     </div>
   )
 }
 
-export default Landing;
+export default CreateUser;

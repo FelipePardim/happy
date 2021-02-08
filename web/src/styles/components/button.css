@@ -1,0 +1,54 @@
+button.confirm-button {
+  margin-top: 64px;
+
+  width: 100%;
+  height: 64px;
+  border: 0;
+  cursor: pointer;
+  background: #37c77f;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+button.confirm-button svg {
+  margin-right: 16px;
+}
+
+button.confirm-button:hover {
+  background: #3ee08f;
+}
+
+button.decline-button {
+    margin-top: 64px;
+  
+    width: 100%;
+    height: 64px;
+    border: 0;
+    cursor: pointer;
+    background: #FF669D;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 800;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: background-color 0.2s;
+  }
+  
+  button.decline-button svg {
+    margin-right: 16px;
+  }
+  
+  button.decline-button:hover {
+    background: #e46e99;
+  }
+  

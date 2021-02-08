@@ -1,0 +1,39 @@
+.form {
+    float: right;
+    padding-right: 30px;
+    padding-top: 10%;
+
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form label,
+a {
+    color: #8fa7b2;
+    text-decoration: none;
+}
+
+.form h1 {
+    color: #5c8599;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.form h2 {
+    color: #5c8599;
+    padding-bottom: 10px;
+    font-size: medium;
+    text-align: left;
+}
+
+.form .checkbox {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
